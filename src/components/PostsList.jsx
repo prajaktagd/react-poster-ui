@@ -1,20 +1,20 @@
 import { useState } from "react";
+import PropTypes from "prop-types";
 import NewPost from "./NewPost";
 import Post from "./Post";
 import Modal from "./Modal";
 import styles from "./PostsList.module.css";
 
-const PostsList = () => {
+const PostsList = (props) => {
+  const { shouldShowModal, onHideModal } = props;
+
   const [author, setAuthor] = useState("");
   const [body, setBody] = useState("");
-  const [shouldShowModal, setShouldShowModal] = useState(true);
-
-  const hideModal = () => setShouldShowModal(false);
 
   return (
     <>
       {shouldShowModal && (
-        <Modal onHideModal={hideModal}>
+        <Modal onHideModal={onHideModal}>
           <NewPost
             onBodyChange={(event) => setBody(event.target.value)}
             onAuthorChange={(event) => setAuthor(event.target.value)}
@@ -31,6 +31,11 @@ const PostsList = () => {
       </ul>
     </>
   );
+};
+
+PostsList.propTypes = {
+  shouldShowModal: PropTypes.bool,
+  onHideModal: PropTypes.func,
 };
 
 export default PostsList;
