@@ -1,0 +1,33 @@
+.post {
+  padding: 1rem;
+  background-color: #9c7eee;
+  border-radius: 8px;
+  box-shadow: 1px 1px 2px 1px #cdc1ed;
+  animation: animate-in 1s ease-out forwards;
+}
+
+.author {
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: #5b028c;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.body {
+  white-space: pre-wrap;
+  font-size: 1.2rem;
+  margin: 0.25rem 0 0 0;
+  color: #5b028c;
+}
+
+@keyframes animate-in {
+  from {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
