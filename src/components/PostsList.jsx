@@ -6,18 +6,19 @@ import Modal from "./Modal";
 import styles from "./PostsList.module.css";
 
 const PostsList = (props) => {
-  const { shouldShowModal, onHideModal } = props;
+  const { isPosting, onStopPosting } = props;
 
   const [author, setAuthor] = useState("");
   const [body, setBody] = useState("");
 
   return (
     <>
-      {shouldShowModal && (
-        <Modal onHideModal={onHideModal}>
+      {isPosting && (
+        <Modal onClose={onStopPosting}>
           <NewPost
             onBodyChange={(event) => setBody(event.target.value)}
             onAuthorChange={(event) => setAuthor(event.target.value)}
+            onClose={onStopPosting}
           />
         </Modal>
       )}
@@ -34,8 +35,8 @@ const PostsList = (props) => {
 };
 
 PostsList.propTypes = {
-  shouldShowModal: PropTypes.bool,
-  onHideModal: PropTypes.func,
+  isPosting: PropTypes.bool,
+  onStopPosting: PropTypes.func,
 };
 
 export default PostsList;

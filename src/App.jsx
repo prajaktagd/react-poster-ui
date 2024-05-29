@@ -3,16 +3,16 @@ import Header from "./components/Header";
 import PostsList from "./components/PostsList";
 
 function App() {
-  const [shouldShowModal, setShouldShowModal] = useState(false);
+  const [isPosting, setIsPosting] = useState(false);
 
-  const hideModal = () => setShouldShowModal(false);
-  const showModal = () => setShouldShowModal(true);
+  const stopPosting = () => setIsPosting(false);
+  const startPosting = () => setIsPosting(true);
 
   return (
     <>
-      <Header onCreatePost={showModal} />
+      <Header onCreatePost={startPosting} />
       <main>
-        <PostsList shouldShowModal={shouldShowModal} onHideModal={hideModal} />
+        <PostsList isPosting={isPosting} onStopPosting={stopPosting} />
       </main>
     </>
   );
