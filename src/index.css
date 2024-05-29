@@ -8,6 +8,12 @@ body {
 }
 
 :root {
+  --light-purple-color: #ece1fa;
+  --purple-shade-1: #ae97fb;
+  --purple-shade-2: #8c6cf7;
+  --dark-purple-color: #5b028c;
+  --box-shadow: 1px 1px 1px var(--light-purple-color);
+
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
 

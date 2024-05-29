@@ -11,7 +11,7 @@
 .modal {
   border: none;
   border-radius: 6px;
-  box-shadow: 1px 1px 2px 1px #9c80e6;
+  box-shadow: var(--box-shadow);
   padding: 0;
   margin: auto;
   overflow: hidden;

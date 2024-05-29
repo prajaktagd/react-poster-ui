@@ -1,15 +1,15 @@
 .post {
   padding: 1rem;
-  background-color: #9c7eee;
+  background-color: var(--purple-shade-1);
   border-radius: 8px;
-  box-shadow: 1px 1px 2px 1px #cdc1ed;
+  box-shadow: var(--box-shadow);
   animation: animate-in 1s ease-out forwards;
 }
 
 .author {
   font-size: 0.8rem;
   font-weight: bold;
-  color: #5b028c;
+  color: var(--dark-purple-color);
   margin: 0;
   text-transform: uppercase;
 }
@@ -18,7 +18,7 @@
   white-space: pre-wrap;
   font-size: 1.2rem;
   margin: 0.25rem 0 0 0;
-  color: #5b028c;
+  color: var(--dark-purple-color);
 }
 
 @keyframes animate-in {
