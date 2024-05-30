@@ -8,7 +8,7 @@ const Posts = () => {
   const listOfPosts = (
     <ul className={styles.posts}>
       {posts.map(({ author, body, id }) => (
-        <Post key={id} author={author} body={body} />
+        <Post key={id} id={id} author={author} body={body} />
       ))}
     </ul>
   );

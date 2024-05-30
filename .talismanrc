@@ -3,4 +3,6 @@ fileignoreconfig:
   checksum: de83d7149bb715d5c914f040200a769fa5d4ee3096101a871de765d53d540e60
 - filename: src/components/PostsList.jsx
   checksum: 5c02544f24af83e0afc2c8df1b5969d7db03c65e2963028915f0e8b6e33fcd80
+- filename: src/routes/Posts.jsx
+  checksum: 5378bf1ac758131b6b7b2be2c9b49f995ebcc43e9c00c4fd09ff9524a25f283d
 version: "1.0"
