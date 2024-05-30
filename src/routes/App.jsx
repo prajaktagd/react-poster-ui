@@ -2,16 +2,6 @@ import { Outlet } from "react-router-dom";
 import PostsList from "../components/PostsList";
 
 const Posts = () => {
-  const addPostHandler = (newPost) => {
-    fetch("http://localhost:8080/posts", {
-      method: "POST",
-      body: JSON.stringify(newPost),
-      headers: { "Content-Type": "application/json" },
-    });
-
-    // setPosts((existingPosts) => [newPost, ...existingPosts]);
-  };
-
   return (
     <main>
       <PostsList />

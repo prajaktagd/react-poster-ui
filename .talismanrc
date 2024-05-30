@@ -2,5 +2,5 @@ fileignoreconfig:
 - filename: package-lock.json
   checksum: de83d7149bb715d5c914f040200a769fa5d4ee3096101a871de765d53d540e60
 - filename: src/components/PostsList.jsx
-  checksum: f1542076d8728bce5df391974019246a30bb34ca207b3576a71b4f223f7184cd
+  checksum: 5c02544f24af83e0afc2c8df1b5969d7db03c65e2963028915f0e8b6e33fcd80
 version: "1.0"
