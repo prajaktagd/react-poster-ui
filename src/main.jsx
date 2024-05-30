@@ -3,8 +3,10 @@ import ReactDOM from "react-dom/client";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import "./index.css";
 import RouteLayout from "./routes/RouteLayout.jsx";
-import Posts, { loader as postsLoader } from "./routes/App.jsx";
-import NewPost, { action as newPostAction } from "./routes/NewPost.jsx";
+import Posts from "./routes/Posts.jsx";
+import NewPost from "./routes/NewPost.jsx";
+import postsLoader from "./loaders/postsLoader.js";
+import newPostAction from "./actions/newPostAction.js";
 
 const router = createBrowserRouter([
   {

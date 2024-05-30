@@ -1,8 +1,8 @@
-import { useLoaderData } from "react-router-dom";
-import Post from "./Post";
-import styles from "./PostsList.module.css";
+import { Outlet, useLoaderData } from "react-router-dom";
+import styles from "./Posts.module.css";
+import Post from "../components/Post";
 
-const PostsList = () => {
+const Posts = () => {
   const posts = useLoaderData();
 
   const listOfPosts = (
@@ -14,7 +14,12 @@ const PostsList = () => {
   );
   const noPosts = <div className={styles.noPosts}>There are no posts yet!</div>;
 
-  return posts.length ? listOfPosts : noPosts;
+  return (
+    <main>
+      {posts.length ? listOfPosts : noPosts}
+      <Outlet />
+    </main>
+  );
 };
 
-export default PostsList;
+export default Posts;
