@@ -1,9 +1,9 @@
-import PropTypes from "prop-types";
+import { useLoaderData } from "react-router-dom";
 import Post from "./Post";
 import styles from "./PostsList.module.css";
 
-const PostsList = (props) => {
-  const { posts } = props;
+const PostsList = () => {
+  const posts = useLoaderData();
 
   const listOfPosts = (
     <ul className={styles.posts}>
@@ -15,10 +15,6 @@ const PostsList = (props) => {
   const noPosts = <div className={styles.noPosts}>There are no posts yet!</div>;
 
   return posts.length ? listOfPosts : noPosts;
-};
-
-PostsList.propTypes = {
-  posts: PropTypes.array,
 };
 
 export default PostsList;

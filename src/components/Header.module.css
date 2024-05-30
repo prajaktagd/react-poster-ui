@@ -28,8 +28,10 @@
   box-shadow: var(--box-shadow);
   cursor: pointer;
   font-weight: bold;
+  text-decoration: none;
 }
 
 .button:hover {
   background-color: var(--purple-shade-2);
+  color: var(--light-purple-color);
 }

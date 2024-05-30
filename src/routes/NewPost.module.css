@@ -32,7 +32,8 @@
   gap: 0.5rem;
 }
 
-.actions button {
+.actions button,
+.actions a {
   cursor: pointer;
   font: inherit;
   padding: 0.5rem 1.5rem;
@@ -42,6 +43,12 @@
   color: var(--dark-purple-color);
 }
 
-.actions button:hover {
+.actions button:hover,
+.actions a:hover {
   background-color: var(--purple-shade-2);
+  color: var(--light-purple-color);
+}
+
+.actions a {
+  text-decoration: none;
 }
